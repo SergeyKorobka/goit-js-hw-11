@@ -23,10 +23,12 @@ function onSubmit(e) {
   e.preventDefault();
   const { ['search-text']: searchTextEl } = e.target.elements;
 
+  clearGallery();
+
   if (searchTextEl.value === '') {
     return;
   }
-  clearGallery();
+
   showLoader();
   getImagesByQuery(searchTextEl.value)
     .then(onFulfilled)
