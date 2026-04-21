@@ -30,7 +30,11 @@ function onSubmit(e) {
   showLoader();
   getImagesByQuery(searchTextEl.value)
     .then(onFulfilled)
-    .catch(console.log)
+    .catch(e => {
+      iziToast.error({
+        message: e.message,
+      });
+    })
     .finally(hideLoader);
 }
 
