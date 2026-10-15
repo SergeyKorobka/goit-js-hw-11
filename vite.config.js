@@ -14,12 +14,12 @@ export default defineConfig(({ command }) => {
     base: process.env.GITHUB_REPOSITORY
       ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`
       : '/',
-    define: {
-      [command === 'serve' ? 'global' : '_global']: {},
-    },
     // define: {
-    //   global: 'globalThis',
+    //   [command === 'serve' ? 'global' : '_global']: {},
     // },
+    define: {
+      global: 'globalThis',
+    },
     root: sourceRoot,
     build: {
       sourcemap: true,
