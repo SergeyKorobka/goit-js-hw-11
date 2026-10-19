@@ -70,3 +70,7 @@
   font-weight: 400;
   line-height: 2;
 }
+
+.glightbox-container .goverlay {
+  background: rgba(46, 47, 66, 0.8);
+}
