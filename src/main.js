@@ -10,7 +10,6 @@ import {
 } from './js/render-functions';
 
 const form = document.querySelector('.form');
-const gallery = document.querySelector('.gallery');
 
 iziToast.settings({
   pauseOnHover: true,
