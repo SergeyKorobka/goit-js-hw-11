@@ -6,6 +6,7 @@ const loader = document.querySelector('.loader');
 
 const lightbox = GLightbox({
   selector: '.gallery-thumb',
+  loop: true,
 });
 
 export function createGallery(images) {
